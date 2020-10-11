@@ -1,0 +1,41 @@
+.example-radio-group {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+}
+
+h1 {
+    color: darkslateblue;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+}
+
+.example-radio-button {
+    margin: 5px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+  
+.form-container > * {
+    width: 100%;
+}
+
+.tp-card {
+    max-width: 300px;
+    text-align: center;
+}
+
+.example-button {
+    margin-left: 10px;
+}
+
+.main-div{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}

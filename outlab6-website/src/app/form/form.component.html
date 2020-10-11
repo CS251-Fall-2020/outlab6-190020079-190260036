@@ -1,0 +1,57 @@
+<div class="main-div">
+<mat-card class="tp-card">
+    <form [formGroup]="infoForm" (ngSubmit)="onSubmit()">
+        <h1>Feedback Form</h1>
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Name:</mat-label>
+                <input matInput placeholder="Placeholder" type="text" formControlName="name" required>
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <mat-hint>Your Name</mat-hint>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Email:</mat-label>
+                <input matInput placeholder="Placeholder" type="email" formControlName="email" required email>
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <mat-hint>Your Email</mat-hint>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Comment:</mat-label>
+                <input matInput placeholder="Placeholder" type="text" formControlName="comment">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <mat-hint>Comments(Optional)</mat-hint>
+            </mat-form-field>
+        </div>
+
+        <br>
+        <div>           
+            <label id="example-radio-group-label">Feedback : </label><br>
+            <mat-radio-group formControlName="feedback">  
+                <mat-radio-button value="Great">Great</mat-radio-button>
+                <mat-radio-button value="Okay">Okay</mat-radio-button>
+                <mat-radio-button value="Not good">Not good</mat-radio-button>
+            </mat-radio-group>
+        </div>
+        <br>
+
+        <div>
+            <button class="example-button" mat-button color="primary" type="submit" [disabled]="!infoForm.valid">Submit</button>
+        </div>
+    </form>
+</mat-card>
+</div>
+
+<div>
+    {{initName}}
+    {{initEmail}}
+    {{initFeedback}}
+    {{initComment}}
+</div>
+
+<div>status : {{ infoForm.status }}</div>
