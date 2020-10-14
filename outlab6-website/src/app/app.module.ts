@@ -48,7 +48,7 @@ import { FormserviceService } from './formservice.service';
       // {path:'',component:AppComponent},
       {path:'form',component:FormComponent},
       {path:'contact',component:ContactComponent},
-      {path: '**', component:ContactComponent},
+      {path: '**', redirectTo: '/contact'},
     ]),
     BrowserAnimationsModule,
   ],
