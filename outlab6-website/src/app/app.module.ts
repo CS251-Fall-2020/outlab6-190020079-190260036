@@ -10,6 +10,10 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -44,6 +48,11 @@ import { FormserviceService } from './formservice.service';
     MatCardModule,
     HttpClientModule,
     MatDialogModule,
+    MatListModule,
+    MatGridListModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    
     RouterModule.forRoot([
       // {path:'',component:AppComponent},
       {path:'form',component:FormComponent},

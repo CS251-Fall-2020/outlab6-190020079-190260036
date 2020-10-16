@@ -15,6 +15,7 @@ export class FormComponent implements OnInit {
   initEmail="";
   initFeedback="";
   initComment="";
+  noResponseYet=true;
 
   infoForm = this.fb.group({
     name: ['', Validators.required],
@@ -37,6 +38,7 @@ export class FormComponent implements OnInit {
         this.initEmail = response.email;
         this.initFeedback = response.feedback;
         this.initComment = response.comment;
+        this.noResponseYet = false;
         this.infoForm.patchValue({
           name: this.initName,
           email: this.initEmail,

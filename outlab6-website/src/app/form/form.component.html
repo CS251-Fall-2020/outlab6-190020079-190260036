@@ -1,5 +1,5 @@
 <div class="main-div">
-<mat-card class="tp-card">
+<mat-card class="tp-card" >
     <form [formGroup]="infoForm" (ngSubmit)="onSubmit()">
         <h1>Feedback Form</h1>
         <div>
@@ -47,11 +47,19 @@
 </mat-card>
 </div>
 
-<div>
-    {{initName}}
-    {{initEmail}}
-    {{initFeedback}}
-    {{initComment}}
+<!-- <div id="validStatus" [ngStyle]="{'background-color': infoForm.status=='INVALID'?'rgb(255, 129, 115)':'rgb(66,255,161)'}">status : {{ infoForm.status }}</div> -->
+<div class="main-div"><mat-card class="tp-card" *ngIf="!noResponseYet" [ngStyle]="{'background-color': infoForm.status=='INVALID'?'rgb(255, 129, 115)':'rgb(66,255,161)'}">
+<mat-card-title>
+    Data received from the server:
+</mat-card-title>
+<mat-card-content>
+    <mat-list>
+    <mat-list-item>Name: {{ initName }}</mat-list-item>
+    <mat-list-item>Email: {{ initEmail }}</mat-list-item>
+    <mat-list-item>Feedback: {{ initFeedback }}</mat-list-item>
+    <mat-list-item>Comments: {{ initComment }}</mat-list-item>
+    </mat-list>
+</mat-card-content>
+</mat-card>
+<div><mat-spinner *ngIf="noResponseYet"></mat-spinner></div>
 </div>
-
-<div>status : {{ infoForm.status }}</div>

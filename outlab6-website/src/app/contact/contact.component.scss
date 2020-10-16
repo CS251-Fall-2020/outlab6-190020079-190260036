@@ -1,0 +1,33 @@
+$alignment:center;
+$normalFont: 25px;
+$height: 400px;
+$width:500px;
+$contatiner-border-color: rgb(20,20,20);
+$border-thickness: 5px;
+$margin: 25px 25px 75px 25px;
+$grid-rows: auto auto auto auto auto auto auto auto;
+
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,1), 
+                0 1px 1px 0 rgba(0,0,0,1), 
+                0 1px 3px 0 rgba(0,0,0,1);
+}
+
+.mat-card-content{
+    font-size: 100px;
+    padding-bottom: 50px;
+}
+
+.contact{
+    display: grid;
+    margin-top: 100px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    justify-content: space-evenly;
+}
+
+#contact-title{
+    font-size: 1.5cm;
+    text-align: $alignment;
+    margin-top: 20px;
+}
